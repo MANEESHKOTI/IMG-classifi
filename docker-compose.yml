@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    shm_size: '256m'
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    command: bash

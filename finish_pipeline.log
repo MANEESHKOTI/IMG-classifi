@@ -1,0 +1,25 @@
+time="2026-10-02T15:25:49+05:30" level=warning msg="Found orphan containers (img-classifi-app-run-93d142c9dca7, img-classifi-app-run-c61f736ce11c, img-classifi-app-run-300b96eb5c4f, img-classifi-app-run-a9fa100d8870, img-classifi-app-run-e2dc0dcf17ae, img-classifi-app-run-a45e60586720) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container img-classifi-app-run-be7bfa739ada Creating 
+ Container img-classifi-app-run-be7bfa739ada Created 
+Removing corrupted image: /app/data/processed/train/Limenitis_arthemis/403907585.jpg (cannot identify image file '/app/data/processed/train/Limenitis_arthemis/403907585.jpg')
+Removed 1 corrupted images.
+Number of classes: 10
+Using device: cpu
+Downloading: "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth" to /root/.cache/torch/hub/checkpoints/mobilenet_v3_small-047dcff4.pth
+  0%|          | 0.00/9.83M [00:00<?, ?B/s]  8%|▊         | 800k/9.83M [00:00<00:01, 8.19MB/s] 21%|██        | 2.02M/9.83M [00:00<00:00, 10.3MB/s] 43%|████▎     | 4.26M/9.83M [00:00<00:00, 15.9MB/s] 70%|███████   | 6.89M/9.83M [00:00<00:00, 20.2MB/s]100%|██████████| 9.83M/9.83M [00:00<00:00, 20.1MB/s]
+Epoch 0/1
+----------
+train Loss: 1.4656 Acc: 0.5018
+val Loss: 1.6995 Acc: 0.5900
+Epoch 1/1
+----------
+train Loss: 0.9299 Acc: 0.6789
+val Loss: 1.3669 Acc: 0.6600
+Best val Acc: 0.660000
+Saved best model to /app/models/species_classifier.pth
+Evaluating model...
+Saved metrics to /app/results/evaluation_metrics.json
+Saved confusion matrix to /app/results
+/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+Generated 5 Grad-CAM visualizations in /app/results/grad_cam_outputs
